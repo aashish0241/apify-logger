@@ -1,0 +1,25 @@
+{
+  "name": "apify-logger",
+  "version": "1.0.0",
+  "description": "Automatic logging system for Apify with sensitive data masking and console capture",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "keywords": [
+    "apify",
+    "logger",
+    "logging",
+    "console",
+    "mask",
+    "security",
+    "sensitive-data"
+  ],
+  "author": "Aashish Timsina",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/apify-smart-logger.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
