@@ -1,12 +1,12 @@
-declare class ApifySmartLogger {
-  constructor(options?: ApifySmartLogger.LoggerOptions);
+declare class SmarterConsole {
+  constructor(options?: SmarterConsole.LoggerOptions);
 
   debug(...args: any[]): void;
   info(...args: any[]): void;
   warn(...args: any[]): void;
   error(...args: any[]): void;
 
-  getLogs(filter?: ApifySmartLogger.LogFilter): ApifySmartLogger.LogEntry[];
+  getLogs(filter?: SmarterConsole.LogFilter): SmarterConsole.LogEntry[];
   clearLogs(): void;
   exportLogs(format?: "json" | "csv" | "text"): string;
 
@@ -14,12 +14,10 @@ declare class ApifySmartLogger {
   addCustomPattern(pattern: RegExp, mask: string): void;
   restoreConsole(): void;
 
-  static createInstance(
-    options?: ApifySmartLogger.LoggerOptions
-  ): ApifySmartLogger;
+  static createInstance(options?: SmarterConsole.LoggerOptions): SmarterConsole;
 }
 
-declare namespace ApifySmartLogger {
+declare namespace SmarterConsole {
   interface LoggerOptions {
     enabled?: boolean;
     logLevel?: "debug" | "info" | "warn" | "error";
@@ -47,4 +45,4 @@ declare namespace ApifySmartLogger {
   }
 }
 
-export = ApifySmartLogger;
+export = SmarterConsole;

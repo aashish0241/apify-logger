@@ -1,9 +1,9 @@
-# Apify Smart Logger 🔒
+# Smarter Console 🔒
 
-[![npm version](https://img.shields.io/npm/v/apify-smart-logger.svg)](https://www.npmjs.com/package/apify-smart-logger)
+[![npm version](https://img.shields.io/npm/v/smarter-console.svg)](https://www.npmjs.com/package/smarter-console)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A sophisticated, automatic logging system designed specifically for Apify Actors. It provides automatic sensitive data masking, console interception, and flexible log management to keep your Actor logs clean, secure, and useful.
+A sophisticated, automatic logging system with sensitive data masking, console interception, and flexible log management to keep your logs clean, secure, and useful.
 
 ## 🚀 Features
 
@@ -36,20 +36,20 @@ A sophisticated, automatic logging system designed specifically for Apify Actors
 Install via npm:
 
 ```bash
-npm install apify-smart-logger
+npm install smarter-console
 ```
 
 ---
 
 ## ⚡ Quick Start
 
-The simplest way to use the logger is to initialize it at the start of your Actor. It will automatically start intercepting console calls.
+The simplest way to use the logger is to initialize it at the start of your application. It will automatically start intercepting console calls.
 
 ```javascript
-const ApifySmartLogger = require("apify-smart-logger");
+const SmarterConsole = require("smarter-console");
 
 // Initialize (auto-captures console logs by default)
-const logger = new ApifySmartLogger();
+const logger = new SmarterConsole();
 
 // Use standard console methods - they are now automatically masked!
 console.log("My API Key is: sk_test_51Mzabc123456789");
@@ -67,7 +67,7 @@ logger.error("Something went wrong", { errorCode: 500 });
 You can customize the logger behavior by passing an options object to the constructor:
 
 ```javascript
-const logger = new ApifySmartLogger({
+const logger = new SmarterConsole({
   enabled: true, // Set to false to disable all logging (Default: true)
   autoCapture: true, // Automatically intercept console methods (Default: true)
   logLevel: "info", // Minimum level to log: 'debug', 'info', 'warn', 'error' (Default: 'info')

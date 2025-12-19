@@ -1,6 +1,6 @@
 "use strict";
 
-class ApifySmartLogger {
+class SmarterConsole {
   constructor(options = {}) {
     this.config = {
       enabled: options.enabled !== false,
@@ -317,8 +317,8 @@ class ApifySmartLogger {
   // ==========================================
 
   static createInstance(options) {
-    return new ApifySmartLogger(options);
+    return new SmarterConsole(options);
   }
 }
 
-module.exports = ApifySmartLogger;
+module.exports = SmarterConsole;
